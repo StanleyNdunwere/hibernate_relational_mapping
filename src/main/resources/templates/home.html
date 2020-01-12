@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hibernate - Relational Mapping</title>
+    </head>
+    <style>
+        .central-image {
+            border-radius: 10px;
+            text-align: center;
+            width: 70%;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .button-container {
+            padding: 10px 20px 10px 20px;
+            margin: auto;
+            background: orange;
+            color: #ffffff;
+            width: fit-content;
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+    <body>
+        <div class="image-container">
+            <img th:src="@{/images/students.png}" class="central-image">
+            <h5>Photo Credit - <a href="https://unsplash.com/photos/RIcMwDLk1wo">Unsplash.com</a></h5>
+        </div>
+        <div class="image-container">
+            <h2>What Do You Want To Do?</h2>
+            <a th:href="@{/}">
+                <div>
+                    <p class="button-container">Create a Course</p>
+                </div>
+            </a>
+            <br/>
+            <a th:href="@{/}">
+                <div>
+                    <p class="button-container">Add an Instructor</p>
+                </div>
+            </a>
+            <br/>
+            <a th:href="@{/}">
+                <div>
+                    <p class="button-container">Add Instructor Details</p>
+                </div>
+            </a>
+            <br/>
+            <a th:href="@{/}">
+                <div>
+                    <p class="button-container">Add Student</p>
+                </div>
+            </a>
+            <br/>
+
+        </div>
+
+    </body>
+</html>
