@@ -1,0 +1,1 @@
+# hibernate_relational_mapping
