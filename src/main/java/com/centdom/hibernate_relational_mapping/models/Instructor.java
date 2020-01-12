@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
+import java.util.List;
+
 import static javax.persistence.GenerationType.*;
 
 @Data
@@ -16,7 +18,7 @@ public class Instructor {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "id")
-    private long id;
+    private int Id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -27,9 +29,12 @@ public class Instructor {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "instructor_detail_id")
-    private String instructorDetailId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "instructor_detail_id")
+    private InstructorDetail instructorDetailId;
 
+    @OneToMany(mappedBy = "instructor")
+    private List<Course> courses;
 
 
 }
